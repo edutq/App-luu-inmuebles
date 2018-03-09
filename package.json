@@ -1,0 +1,23 @@
+{
+  "name": "app-luu-inmuebles",
+  "version": "1.0.0",
+  "description": "aplicacion de luu red vendedores",
+  "main": "app.js",
+  "scripts": {
+    "test": "testapp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edutq/App-luu-inmuebles.git"
+  },
+  "author": "Eduardo Tavarez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edutq/App-luu-inmuebles/issues"
+  },
+  "homepage": "https://github.com/edutq/App-luu-inmuebles#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mysql": "^2.15.0"
+  }
+}
