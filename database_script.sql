@@ -9,7 +9,7 @@ create table TipoSalas(
 	primary key (id)
 );
 create table TipoInmuebles(
-	id int primary key not null auto_increment,
+	id int not null auto_increment,
 	nombre varchar(15),
 	primary key (id)
 );
@@ -28,7 +28,7 @@ create table Usuarios(
 );
 create table SalasChat(
 	id int not null auto_increment,
-	tipo_de_sala not null,
+	tipo_de_sala int not null,
 	primary key (id),
 	foreign key (tipo_de_sala) references TipoSalas(id)
 );
