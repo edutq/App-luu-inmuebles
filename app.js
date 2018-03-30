@@ -1,10 +1,17 @@
-var express = require('express');
-var mysql 	= require('mysql');
+var express 	= require('express');
+var mysql 		= require('mysql');
+var moment 		= require('moment');
+var path    	= require('path');
+var handlebars  = require('express-handlebars');
+
+
+var login = require('./routes/login');
 
 var app = express();
 
 app.set('port', process.env.PORT || 3000);
 
+app.use('/', login);
 // custom 404 page
 app.use(function(req, res){
 res.type('text/plain');
@@ -27,10 +34,23 @@ var con = mysql.createConnection({
   database: "appluuprueba"
 });
 
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.locals.moment = moment;
+app.set('view engine', 'hbs');
+app.engine('hbs', handlebars({
+	extname: '.hbs',
+  layoutsDir: 'views/layouts',
+  defaultLayout: 'users'
+}));
+
+
 con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
 });
+
+
 
 var http = require('http').Server(app);
 
