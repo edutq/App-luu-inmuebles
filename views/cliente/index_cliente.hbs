@@ -1,0 +1,94 @@
+
+ 
+
+  
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+
+
+  </style>
+
+<body>
+
+
+  <main>
+    <center>
+
+
+        <div class="z-depth-1 white row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE; width: 100%; background-image: url('/images/oficina'); background-repeat: no-repeat; background-size: 100%; height: 80%; opacity:1;">
+
+          <form class="col s12" method="post" action='busqueda_cliente.hbs'>
+            <div class='row'>
+              <br/>
+              <br/>
+              <br/>
+              <div class='col s12'>
+              </div>
+
+            </div>
+
+            <div class='row white'>
+              <div class='input-field col s2'>
+                <select id='inmueble' name='inmuelbe'>
+                  <option value="" disabled selected>Tipo de Inmueble</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+              </div>
+              <div class='input-field col s2'>
+                <select id='estado' name='estado'>
+                  <option value="" disabled selected>Estado</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+              </div>
+              <div class='input-field col s2'>
+                <select id='ciudad' name='ciudad'>
+                  <option value="" disabled selected>Ciudad</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+              </div>
+              <div class='input-field col s2'>
+                <select id='ciudad' name='ciudad'>
+                  <option value="" disabled selected>Compra o renta</option>
+                  <option value="1">Compra</option>
+                  <option value="2">Renta</option>
+                </select>
+              </div>
+              <div class='input-field col s2'>
+                <select id='precio' name='precio'>
+                  <option value="" disabled selected>Precio</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+              </div>
+              <div class = 'input-field col s1'>
+                <button type='submit' name='buscar' class='col s12 btn btn-large waves-effect indigo'>Buscar</button>
+              </div>
+            </div>
+            </div>
+           
+              
+          </form>
+        </div>
+    </center>
+
+  </main>
+
+  
+</body>
+
+</html>

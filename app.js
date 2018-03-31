@@ -11,6 +11,21 @@ var app = express();
 
 app.set('port', process.env.PORT || 3000);
 
+
+// view engine setup
+app.use(express.static("public"));
+app.set('views', path.join(__dirname, 'views'));
+app.locals.moment = moment;
+app.set('view engine', 'hbs');
+app.engine('hbs', handlebars({
+  extname: '.hbs',
+  layoutsDir: 'views/layouts',
+  defaultLayout: 'clientes'
+}));
+
+
+
+
 app.use('/', login);
 // custom 404 page
 app.use(function(req, res){
@@ -33,16 +48,6 @@ var con = mysql.createConnection({
   password: "root",
   database: "appluuprueba"
 });
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.locals.moment = moment;
-app.set('view engine', 'hbs');
-app.engine('hbs', handlebars({
-	extname: '.hbs',
-  layoutsDir: 'views/layouts',
-  defaultLayout: 'users'
-}));
 
 
 con.connect(function(err) {

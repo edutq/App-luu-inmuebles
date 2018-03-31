@@ -4,11 +4,11 @@ var router = express.Router();
 
 // define the home page route
 router.get('/', function (req, res) {
-  res.render('sesiones/login');
+  res.render('cliente/index_cliente');
 })
 // define the about route
 router.get('/about', function (req, res) {
-  res.send('About birds')
+  res.render('cliente/busqueda')
 })
 
 module.exports = router
